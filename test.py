@@ -7,3 +7,6 @@ def triangle(n):
             l.append(j)
         liste.append(l)
     return liste
+
+"""Yo j'ai rajouté ce commentaire
+"""
