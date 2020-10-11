@@ -3,7 +3,7 @@ import turtle
 t = turtle.Turtle()
 t.speed("fastest")
 
-#test
+# test depuis le pc portable
 
 def european_flag(width):
     """pre: width > 0
