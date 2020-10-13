@@ -1,4 +1,8 @@
 def is_adn(s):
+    """pre: s est un string
+       post: retourne True si s contient seulement les caractères [a, t, c, g] en
+             minuscule ou en majuscule. Si le string est vide il retourne False
+    """
     if s == "":
         return False
 
@@ -11,6 +15,9 @@ def is_adn(s):
     return True
 
 def positions(s, p):
+    """pre: s et p sont des strings et len(p) <= len(s)
+       post: retourne les positions des occurences de p dans s
+    """
     pos = []
     l = []
     occur = 0
@@ -34,6 +41,9 @@ def positions(s, p):
     return pos
 
 def distance_h(s, p):
+    """pre: s et p sont des strings de tailles égales
+       post: retourne le nombre de caractéres différents entre s et p
+    """
     if len(s) != len(p):
         return None
     count = 0
@@ -45,6 +55,9 @@ def distance_h(s, p):
     return count
 
 def distances_matrice(l):
+    """pre: l est une liste contenant des strings
+       post: retourne une matrice des distances de hamming entre tous les caractères de la liste l
+    """
     matrix = []
     for i in l:
         line = []
