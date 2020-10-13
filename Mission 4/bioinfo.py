@@ -43,3 +43,12 @@ def distance_h(s, p):
             count += 1
         current += 1
     return count
+
+def distances_matrice(l):
+    matrix = []
+    for i in l:
+        line = []
+        for j in l:
+            line.append(distance_h(i, j))
+        matrix.append(line)
+    return matrix
