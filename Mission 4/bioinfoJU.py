@@ -1,15 +1,24 @@
 def positions(s, p):
     pos = []
+    l = []
+    occur = 0
+    current = 0
     for i in s.lower():
-        for j in range(len(p)):
+        if i == p[occur].lower():
+            occur += 1
+            l.append(current)
+        elif i == p[0].lower():
+            l = []
+            l.append(current)
+            occur = 1
+        else:
+            l = []
             occur = 0
-            if i == p[j].lower():
-                l = []
-                occur += 1
-                l.append(s.index(i))
         if occur == len(p):
             pos.append(l[0])
-
+            l = []
+            occur = 0
+        current += 1
     return pos
 
-print(positions("ACGACC", "cg"))
+
