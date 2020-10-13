@@ -1,1 +1,0 @@
-print("un truc à la con.")
