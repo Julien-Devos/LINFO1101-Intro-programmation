@@ -36,7 +36,10 @@ def positions(s, p):
         if occur == len(p):
             pos.append(l[0])
             l = []
-            occur = 0
+            if i.lower() == p[0].lower():
+                occur = 1
+            else:
+                occur = 0
         current += 1
     return pos
 
@@ -49,7 +52,7 @@ def distance_h(s, p):
     count = 0
     current = 0
     for e in s:
-        if e != p[current]:
+        if e.lower() != p[current].lower():
             count += 1
         current += 1
     return count
