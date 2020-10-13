@@ -1,5 +1,5 @@
 print("Bonjour, ceci est un test!")
-for i in range(10):
+for i in range(5):
     name = input("Comment t'appelles tu ?")
     print(f"Bonjour {name}, ceci est un test!")
 
