@@ -1,14 +1,13 @@
-s=""
-def is_adn(s):
+def distance_h(s, p):
+    if len(s) != len(p):
+        return None
+    current = 0
+    count = 0
     for e in s:
-        if e=="a" or e=="A" or e=="t" or e=="T" or e=="c" or e=="C" or e=="g" or e=="G":
-            pass
+        if e == p[current]:
+            current += 1
+            count += 1
         else:
-            return False
-    return True
-print(is_adn(s))
-
-def positions(s, p):
-    for e in s:
-        if e == p[0]:
-
+            pass
+    return count
+print (distance_h("ABCDE", "AEEE"))
