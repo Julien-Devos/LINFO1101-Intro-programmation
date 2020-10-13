@@ -7,3 +7,7 @@ def is_adn(s):
             return False
     return True
 print(is_adn(s))
+
+def positions(s, p):
+    for e in s:
+        if e == p[0]:
