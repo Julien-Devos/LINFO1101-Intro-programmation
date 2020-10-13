@@ -1,13 +1,15 @@
-def is_adn(s):
-    if s == "":
-        return False
+def positions(s, p):
+    pos = []
+    for i in s.lower():
+        for j in range(len(p)):
+            occur = 0
+            if i == p[j].lower():
+                l = []
+                occur += 1
+                l.append(s.index(i))
+        if occur == len(p):
+            pos.append(l[0])
 
-    for i in s:
-        if i == "a" or i == "A" or i == "t" or i == "T" or i == "c" or i == "C" or i == "g" or i == "G":
-            pass
-        else:
-            return False
+    return pos
 
-    return True
-
-print(is_adn("aAaza"))
+print(positions("ACGACC", "cg"))
