@@ -1,13 +1,12 @@
 def distance_h(s, p):
     if len(s) != len(p):
         return None
-    current = 0
     count = 0
+    current = 0
     for e in s:
-        if e == p[current]:
-            current += 1
+        if e != p[current]:
             count += 1
-        else:
-            pass
+        current += 1
     return count
-print (distance_h("ABCDE", "AEEE"))
+
+print (distance_h("ABCDE", "ABCEB"))
