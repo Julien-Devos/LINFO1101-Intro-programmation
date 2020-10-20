@@ -400,6 +400,6 @@ def test_distance():
 
 #Few tests to verify the tour_distance function
 def test_tour_distance():
-    assert tour_distance(["Jodoigne","Zwijndrecht","Incourt"],all_communes) == 135326.96417597873,"Test n°1"
-    assert tour_distance(["Momignies","Jodoigne","Waterloo"],all_communes) == 203976.29977586382,"Test n°2"
+    assert tour_distance(["Jodoigne","Zwijndrecht","Incourt"],all_communes) == 135326.96417597873, "Test n°1"
+    assert tour_distance(["Momignies","Jodoigne","Waterloo"],all_communes) == 203976.29977586382, "Test n°2"
     assert tour_distance(["Zwijndrecht","Aalst","Jodoigne","Bruxelles"], all_communes) == 175348.4839877691, "Test n°3"
