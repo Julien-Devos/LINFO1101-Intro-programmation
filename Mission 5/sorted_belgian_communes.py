@@ -1,3 +1,5 @@
+import math
+
 # list of (most) Belgian communities, with coordinates according to a Mercator projection.
 all_communes = [("Aalst", (575061.8368696974, 5644396.819551783)),("Aalter", (531519.6775850406, 5659184.536941301)),
     ("Aarschot", (629867.1340910662, 5649141.00455739)),("Aartselaar", (596785.2232017588, 5665558.287847248)),
@@ -290,29 +292,114 @@ def verify_order(communes):
         Returns:
             True si la liste est triée et False si elle ne l'est pas
     """
-    assert communes == type(list), "communes n'est pas une liste !"
-
-def test_verify_order():
-    assert
-
-
-def binary_search ( name, list_of_names ):
-    first = 0
-    last = len(list_of_names)-1
-    found = False
-    index = 0
-
-    while first<=last and not found:
-        middle = (first + last)//2
-        if list_of_names[middle] == name:
-            found = True
-            index = middle
+    last = communes[0]
+    for i in range(1, len(communes)):
+        if communes[i] > last:
+            last = communes[i]
         else:
-            if name < list_of_names[middle]:
-                last = middle-1
+            return False
+    return True
+
+def coordinate(commune,all_communes):
+    """ Retourne la coordonée de la commune rentrée dans la liste donnée
+
+        Par exemple: coordinate("test", [("test",(42,42))]) == (42,42)
+
+        Args:
+            commune: un string qui est compris dans all_communes
+            all_communes: une liste ordonée qui suit ce "pattern" [("Nom",(coords, coords)), etc...]
+        Returns:
+            les coordonnées de commune en fonction de la liste all_communes
+    """
+    first = 0
+    last = len(all_communes) - 1
+
+    while first <= last:
+        middle = (first + last) // 2
+        if all_communes[middle][0] == commune:
+            return all_communes[middle][1]
+        else:
+            if commune < all_communes[middle][0]:
+                last = middle - 1
             else:
-                first = middle+1
+                first = middle + 1
 
-    return found,index
 
-print(verify_order("hello"))
+def calcul_distance(coord1, coord2):
+    """ Retourne la distance entre coord1 et coord2
+
+        Par exemple: calcul_distance((2,3),(4,5)) == 2.8284271247461903
+
+        Args:
+            coord1: un tuple de la forme (x1, y1)
+            coord2: un tuple de la forme (x2, y2)
+        Returns:
+            la distance entre coord1 et coord2
+    """
+    x1, x2, y1, y2 = coord1[0], coord2[0], coord1[1], coord2[1]
+    return math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+
+def distance(commune1, commune2, all_communes):
+    """ Retourne la distance entre commune1 et commune2 en fonction de leur coordonnées dans all_communes
+
+        Par exemple: distance("Jodoigne","Incourt",all_communes) == 5331.167160410512
+
+        Args:
+            commune1: un strings qui est compris dans all_communes
+            commune2: un strings qui est compris dans all_communes
+        Returns:
+            la distance entre la commune1 et la commune 2 en fonction de leur coordonnées dans all_communes
+    """
+    coord1, coord2 = coordinate(commune1, all_communes), coordinate(commune2, all_communes)
+    return calcul_distance(coord1, coord2)
+
+
+def tour_distance(communes, all_communes):
+    """ Retourne la distance totale d'une tournée à travers communes dans all_communes
+
+        Par exemple: (tour_distance(["Jodoigne","Incourt","Grez-Doiceau"], all_communes)) == 28218.7067094605
+
+        Args:
+            communes: une liste qui contient des noms de communes présentes dans all_communes
+            all_communes: une liste qui contient le nom des communes et leur coordonnées
+        Returns:
+            la distance totale d'une tournée à travers communes dans all_communes
+    """
+    tour = 0
+
+    for i in range(len(communes)):
+        if communes[i] == communes[-1]:
+            tour += distance(communes[i], communes[0], all_communes)
+        else:
+            tour += distance(communes[i], communes[i+1], all_communes)
+    return tour
+
+
+#Few tests to verify the verify_order function
+def test_verify_order():
+    assert verify_order([("Aarschot"),("Tienen"),("Bastogne"),("Bornem"),("Bouillon"),("Durbuy"),("Gembloux")]) == False, "Test n°1"
+    assert verify_order([("Aarschot"),("Anhe"),("Bastogne"),("Bornem"),("Bouillon"),("Durbuy"),("Gembloux")]) == True, "Test n°2"
+    assert verify_order(["a","b","c"]) == True, "Test n°3"
+    assert verify_order(["a","c","e"]) == True, "Test n°4"
+    assert verify_order(["aa","be","ac"]) == False, "Test n°5"
+    assert verify_order(["b","c","a","d","g","e"]) == False, "Test n°6"
+
+#Few tests to verify the coordinate function
+def test_coordinate():
+    assert coordinate("Aalst", all_communes) == (575061.8368696974, 5644396.819551783), "Test n°1"
+    assert coordinate("Yvoir", all_communes) == (637346.942455538, 5576647.201409407), "Test n°2"
+    assert coordinate("Jodoigne", all_communes) == (631419.6159859067, 5620152.4620154435), "Test n°3"
+    assert coordinate("Incourt", all_communes) == (626398.8997224491, 5618359.768094527), "Test n°4"
+    assert coordinate("Waterloo", all_communes) == (597653.6363825062, 5619234.152995093), "Test n°5"
+
+#Few tests to verify the distance function
+def test_distance():
+    assert distance("Jodoigne","Zwijndrecht", all_communes) == 65604.09013718639, "Test n°1"
+    assert distance("Momignies","Jodoigne", all_communes) == 91089.66689552955, "Test n°2"
+    assert distance("Waterloo", "Brugge", all_communes) ==101324.29000123587, "Test n°3"
+
+#Few tests to verify the tour_distance function
+def test_tour_distance():
+    assert tour_distance(["Jodoigne","Zwijndrecht","Incourt"],all_communes) == 135326.96417597873,"Test n°1"
+    assert tour_distance(["Momignies","Jodoigne","Waterloo"],all_communes) == 203976.29977586382,"Test n°2"
+    assert tour_distance(["Zwijndrecht","Aalst","Jodoigne","Bruxelles"], all_communes) == 175348.4839877691, "Test n°3"
