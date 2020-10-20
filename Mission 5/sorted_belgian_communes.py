@@ -291,10 +291,9 @@ def verify_order(communes):
             True si la liste est triée et False si elle ne l'est pas
     """
     assert communes == type(list), "communes n'est pas une liste !"
-    return communes
 
-#def test_verify_order():
-    #assert
+def test_verify_order():
+    assert
 
 
 def binary_search ( name, list_of_names ):
@@ -316,4 +315,4 @@ def binary_search ( name, list_of_names ):
 
     return found,index
 
-print("acd" < "abc")
+print(verify_order("hello"))
