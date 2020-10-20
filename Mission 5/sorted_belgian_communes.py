@@ -1,5 +1,4 @@
 # list of (most) Belgian communities, with coordinates according to a Mercator projection.
-
 all_communes = [("Aalst", (575061.8368696974, 5644396.819551783)),("Aalter", (531519.6775850406, 5659184.536941301)),
     ("Aarschot", (629867.1340910662, 5649141.00455739)),("Aartselaar", (596785.2232017588, 5665558.287847248)),
     ("Affligem", (578131.916279454, 5639292.55774853)),("Aiseau-Presles", (611605.8849598696, 5585675.111576218)),
@@ -280,3 +279,41 @@ all_communes = [("Aalst", (575061.8368696974, 5644396.819551783)),("Aalter", (53
     ("Zulte", (532397.6065278105, 5643131.598346917)),("Zutendaal", (680350.0516650463, 5645544.984660175)),
     ("Zwalm", (550503.4509837793, 5636815.01206359)),("Zwevegem", (527022.9588602236, 5625430.548575103)),
     ("Zwijndrecht", (593722.544393318, 5673844.430093279))]
+
+def verify_order(communes):
+    """ Retourne True si la liste est triée et False si non
+
+        Par exemple: verify_order(["a","c","d"]) == False et verify_order(["a","b","c"]) == True
+
+        Args:
+            communes: une liste de tuples dont l'index 0 est le nom
+        Returns:
+            True si la liste est triée et False si elle ne l'est pas
+    """
+    assert communes == type(list), "communes n'est pas une liste !"
+    return communes
+
+#def test_verify_order():
+    #assert
+
+
+def binary_search ( name, list_of_names ):
+    first = 0
+    last = len(list_of_names)-1
+    found = False
+    index = 0
+
+    while first<=last and not found:
+        middle = (first + last)//2
+        if list_of_names[middle] == name:
+            found = True
+            index = middle
+        else:
+            if name < list_of_names[middle]:
+                last = middle-1
+            else:
+                first = middle+1
+
+    return found,index
+
+print("acd" < "abc")
