@@ -396,7 +396,7 @@ def test_coordinate():
 def test_distance():
     assert distance("Jodoigne","Zwijndrecht", all_communes) == 65604.09013718639, "Test n°1"
     assert distance("Momignies","Jodoigne", all_communes) == 91089.66689552955, "Test n°2"
-    assert distance("Waterloo", "Brugge", all_communes) ==101324.29000123587, "Test n°3"
+    assert distance("Waterloo", "Brugge", all_communes) == 101324.29000123587, "Test n°3"
 
 #Few tests to verify the tour_distance function
 def test_tour_distance():
