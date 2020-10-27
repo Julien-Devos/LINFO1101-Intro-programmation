@@ -284,9 +284,7 @@ all_communes = [("Aalst", (575061.8368696974, 5644396.819551783)),("Aalter", (53
 
 def verify_order(communes):
     """ Retourne True si la liste est triée et False si non
-
         Par exemple: verify_order(["a","c","d"]) == False et verify_order(["a","b","c"]) == True
-
         Args:
             communes: une liste de tuples dont l'index 0 est le nom
         Returns:
@@ -302,9 +300,7 @@ def verify_order(communes):
 
 def coordinate(commune,all_communes):
     """ Retourne la coordonée de la commune rentrée dans la liste donnée
-
         Par exemple: coordinate("test", [("test",(42,42))]) == (42,42)
-
         Args:
             commune: un string qui est compris dans all_communes
             all_communes: une liste ordonée qui suit ce "pattern" [("Nom",(coords, coords)), etc...]
@@ -327,9 +323,7 @@ def coordinate(commune,all_communes):
 
 def calcul_distance(coord1, coord2):
     """ Retourne la distance entre coord1 et coord2
-
         Par exemple: calcul_distance((2,3),(4,5)) == 2.8284271247461903
-
         Args:
             coord1: un tuple de la forme (x1, y1)
             coord2: un tuple de la forme (x2, y2)
@@ -341,9 +335,7 @@ def calcul_distance(coord1, coord2):
 
 def distance(commune1, commune2, all_communes):
     """ Retourne la distance entre commune1 et commune2 en fonction de leur coordonnées dans all_communes
-
         Par exemple: distance("Jodoigne","Incourt",all_communes) == 5331.167160410512
-
         Args:
             commune1: un strings qui est compris dans all_communes
             commune2: un strings qui est compris dans all_communes
@@ -356,9 +348,7 @@ def distance(commune1, commune2, all_communes):
 
 def tour_distance(communes, all_communes):
     """ Retourne la distance totale d'une tournée à travers communes dans all_communes
-
         Par exemple: (tour_distance(["Jodoigne","Incourt","Grez-Doiceau"], all_communes)) == 28218.7067094605
-
         Args:
             communes: une liste qui contient des noms de communes présentes dans all_communes
             all_communes: une liste qui contient le nom des communes et leur coordonnées
