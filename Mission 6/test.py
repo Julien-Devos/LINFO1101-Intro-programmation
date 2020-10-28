@@ -13,7 +13,7 @@ def test_search():
     assert assist.search("this") == "'this' is in the Dictionary", 'test 1'
     assert assist.search("bitch") == "'bitch' is in the Dictionary", 'test 2'
     assert assist.search("cunt") == "'cunt' is in the Dictionary", 'test 3'
-    assert assist.
+    assert assist.search
 
 def test_sum():
     assert assist.sum([4, 6, 5, 3, 9, 2]) == "La somme vaut : 29", 'test 1'

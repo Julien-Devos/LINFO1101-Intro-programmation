@@ -37,7 +37,7 @@ def do_command(command):
 
         elif command[0] == 'avg':
             parameter = (','.join(command[1:len(command)])).split(',')
-            print("La somme vaut : " + str(avg(parameter))
+            print("La somme vaut : " + str(avg(parameter)))
 
         elif command[0] == 'help':
             print(help())
