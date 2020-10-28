@@ -77,8 +77,10 @@ def info():
     return "Nombre de lignes: " + str(lines) + "\nNombre de caractères: " + str(caract)
 
 def dictionary():
-    """ Il ordonne le fichier filename et le stock dans une variable
+    """ Il ordonne le fichier filename et le stock dans une variable global
 
+        Returns:
+            Retourne "Read " + filename + " as a Dictionary"
     """
     with open(filename, "r") as file:
         global sorted_file
