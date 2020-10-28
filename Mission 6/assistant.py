@@ -31,13 +31,13 @@ def do_command(command):
         elif command[0] == 'sum':
             try:
                 parameter = (','.join(command[1:len(command)])).split(',')
-                print(sum(parameter))
+                print("La somme vaut : " + str(sum(parameter)))
             except ValueError:
                 print("This command is used with integers only, type help for help")
 
         elif command[0] == 'avg':
             parameter = (','.join(command[1:len(command)])).split(',')
-            print("La somme vaut : " + str(avg(parameter)))
+            print(avg(parameter))
 
         elif command[0] == 'help':
             print(help())
