@@ -11,7 +11,10 @@ def start_assistant():
 def do_command(command):
     try:
         if command[0] == 'file':
-            print(file(command[1]))
+            try:
+                print(file(command[1]))
+            except FileNotFoundError:
+                print("File not found. type help for help")
 
         elif command[0] == 'info':
             print(info())
@@ -26,8 +29,11 @@ def do_command(command):
                 print("This file is not sorted, use 'dictionary' before 'search' ")
 
         elif command[0] == 'sum':
-            parameter = (','.join(command[1:len(command)])).split(',')
-            print(sum(parameter))
+            try:
+                parameter = (','.join(command[1:len(command)])).split(',')
+                print(sum(parameter))
+            except ValueError:
+                print("This command is used with integers only, type help for help")
 
         elif command[0] == 'avg':
             parameter = (','.join(command[1:len(command)])).split(',')
@@ -53,6 +59,9 @@ def file(name):
     """
     global filename
     filename = name
+
+    file = open(filename, "r")
+    file.close()
     return "Vous travaillez avec le ficher: " + filename
 
 def info():
@@ -148,5 +157,6 @@ def exit():
     print("Stopping program")
     raise SystemExit
 
-while True:
-    start_assistant()
+if __name__ == "__main__":
+    while True:
+        start_assistant()
