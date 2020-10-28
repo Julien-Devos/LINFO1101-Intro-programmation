@@ -37,7 +37,7 @@ def do_command(command):
 
         elif command[0] == 'avg':
             parameter = (','.join(command[1:len(command)])).split(',')
-            print(avg(parameter))
+            print("La somme vaut : " + str(avg(parameter))
 
         elif command[0] == 'help':
             print(help())
@@ -121,7 +121,7 @@ def sum(numbers):
     somme = 0
     for i in numbers:
         somme += int(i)
-    return "La somme vaut : " + str(somme)
+    return somme
 
 def avg(numbers):
     """ Affiche la moyenne des nombres donnés par l'utilisateur.
