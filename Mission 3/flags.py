@@ -181,3 +181,5 @@ def presentation():
             t.right(15)
             colors = ["black", "blue", "green", "red", "magenta", "cyan", "yellow", "white"]
             t.color(colors[j])
+
+presentation()
