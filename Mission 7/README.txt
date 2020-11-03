@@ -1,2 +1,3 @@
-Guacamole c'est bon
-ma bite
+Guacamole c'est bon guacamole
+ma bite bon
+guacamole
