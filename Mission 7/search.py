@@ -1,15 +1,14 @@
-def run_program():
+def run_program(filename):
     """ Demande au user le nom du fichier dans lequel il veut travailler et lui demande de donner une liste de mots.
 
         Appelle la fonction print_lines(filename, l).
     """
-    filename = input("\nDans quel fichier souhaitez-vous travailler? ")
-    words = input("\n Entrez une liste de mots: ")
-    l = words.lower.split(' ')
+    words = input("\nEntrez une liste de mots: ")
+    l = words.lower().split(' ')
     print_lines(filename, l)
 
 def print_lines(filename, l):
-    pass
+    get_lines(l,create_index(filename))
 
 def readfile(filename):
     """ Retourne une liste qui contient les lignes du fichier.
@@ -32,8 +31,8 @@ def get_words(line):
         Returns:
             une liste contenant les mots de la phrase sans la ponctuation
     """
-    alphabet = 'abcdefghijklmnopqrstuvwxyzéèàç'
-    list_line = line.strip().lower().split(' ')
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    list_line = line.replace("\t"," ").strip().lower().split(' ')
     l = []
     for i in list_line:
         word = ''
@@ -80,23 +79,27 @@ def get_lines(words,index):
             une liste des identifiants des lignes qui contiennent tous les mots de la liste words.
 
     """
+    #TODO execpt Key error  quand le mot donné n'est pas dans le fichier
     l = []
     for word in words:
         l.append([word, list(index[word])])
-
-    for indexs in range(len(l[0][1])):
-        for i in range(len(l)):
-            try:
-                if l[i][1][indexs] != indexs:
-                    break
-            except:
-                pass
-        l.append(indexs)
     print(l)
-    return l
+    final_list = []
+    for i in l[0][1]:
+        count = 0
+        for j in range(1,len(l)):
+            for k in l[j][1]:
+                if k == i:
+                    count += 1
+                    break
+        if count == len(l)-1:
+            final_list.append(i)
+    return final_list
 
+#get_lines(["musique","hans","zimmer"] ,create_index("text_exemple_1.txt")) == 9
+#get_lines(["vous","etes"] ,create_index("text_exemple_1.txt"))  == 0
 
 if __name__ == "__main__":
-    """while True:
-        run_program()"""
-    get_lines(['guacamole','bon'] ,create_index("README.txt"))
+    filename = input("\nDans quel fichier souhaitez-vous travailler? ")
+    while True:
+        run_program(filename)
