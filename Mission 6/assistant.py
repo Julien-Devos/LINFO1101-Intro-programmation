@@ -118,10 +118,13 @@ def sum(numbers):
         Returns:
             Retourne la sommes des nombres dans numbers.
     """
-    somme = 0
-    for i in numbers:
-        somme += int(i)
-    return somme
+    try:
+        somme = 0
+        for i in numbers:
+            somme += int(i)
+        return somme
+    except ValueError:
+        print("Not integers type help for help")
 
 def avg(numbers):
     """ Affiche la moyenne des nombres donnés par l'utilisateur.
