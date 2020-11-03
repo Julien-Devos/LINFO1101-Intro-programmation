@@ -69,6 +69,17 @@ def create_index(filename):
     return dictionary
 
 def get_lines(words,index):
+    """ Retourne les identifiants des lignes qui contiennent tous les mots de la liste words en utilisant le dictionnaire
+    contenant l'index.
+
+    Args:
+        words: lst: plusieurs mots
+        index: dictionnaire contenant des index
+
+        Returns:
+            une liste des identifiants des lignes qui contiennent tous les mots de la liste words.
+
+    """
     l = []
     for word in words:
         l.append([word, list(index[word])])
