@@ -1,5 +1,6 @@
+#Devos Bryan et Devos Julien
 def run_program(filename):
-    """ Demande au user le nom du fichier dans lequel il veut travailler et lui demande de donner une liste de mots.
+    """ Demande de donner une liste de mots et lance le programme.
 
         Appelle la fonction print_lines(filename, l).
     """
@@ -11,6 +12,8 @@ def run_program(filename):
         print_lines(filename, l)
 
 def print_lines(filename, l):
+    """ Va imprimer l'index des lignes ou sont présent les mots de l
+    """
     try:
         print(get_lines(l,create_index(filename)))
     except KeyError:
@@ -26,8 +29,12 @@ def readfile(filename):
         Returns:
             une liste contenant les lignes du fichier
     """
-    with open(filename, 'r') as file:
-        return file.readlines()
+    try:
+        with open(filename, 'r') as file:
+            return file.readlines()
+    except FileNotFoundError:
+        return "File not found!"
+
 
 def get_words(line):
     """ Retourne une liste contenant les mots sans la ponctuation de la ligne rentrée en paramètre.
@@ -51,14 +58,14 @@ def get_words(line):
     return l
 
 def create_index(filename):
-    """ Retourne un dictionnaire qui contient tous les mots différents du fichier et pour chaque mot, donne les index de chaque ligne
-    où ils se trouvent et pour chaque index, donne sa récurrence sur cet index.
+    """ Retourne un dictionnaire qui contient tous les mots différents du fichier et pour chaque mot, un dictionnaire qui contient
+        les indexs de chaque ligne où ils se trouvent et pour chaque index, donne sa récurrence sur cet index.
 
         Args:
             filename: str: le nom du fichier
 
         Returns:
-            un dictionnaire d'index
+            un dictionnaire d'indexs
     """
     dictionary = {}
     lines = readfile(filename)
@@ -75,15 +82,15 @@ def create_index(filename):
     return dictionary
 
 def get_lines(words,index):
-    """ Retourne les identifiants des lignes qui contiennent tous les mots de la liste words en utilisant le dictionnaire
+    """ Retourne les indexs des lignes qui contiennent tous les mots de la liste words en utilisant le dictionnaire
     contenant l'index.
 
     Args:
-        words: lst: plusieurs mots
-        index: dictionnaire contenant des index
+        words: lst: liste de plusieurs mots
+        index: dictionnaire contenant des indexs
 
         Returns:
-            une liste des identifiants des lignes qui contiennent tous les mots de la liste words.
+            une liste des indexs des lignes qui contiennent tous les mots de la liste words.
     """
     l = []
     for word in words:
