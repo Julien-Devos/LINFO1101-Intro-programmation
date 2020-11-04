@@ -2,14 +2,14 @@
 import search
 
 def test_readfile():
-    assert search.readfile("text_exemple_2.txt") == ["Bonjour moi\n","m'appelle cafe.\n","test c'est le test\n","pour le programme tester.??!!\n","parler france?! moi je :.\n","    pas tres"], "test n°1"
-    assert search.readfile("lefichierexistepas") == "File not found!", "test n°2"
-    assert search.readfile("ct_pas_un_bon_fichier_non_plus") == "File not found!", "test n°3"
+    assert search.readfile("text_exemple_2.txt") == ["Bonjour moi\n","m'appelle cafe.\n","test c'est le test\n","pour le programme tester.??!!\n","parler france?! moi je :.\n","    pas tres"], 'test n°1'
+    assert search.readfile("lefichierexistepas") == "File not found!", 'test n°2'
+    assert search.readfile("ct_pas_un_bon_fichier_non_plus") == "File not found!", 'test n°3'
 
 def test_get_words():
-    assert search.get_words("pour le programme tester.??!!\n") == ["pour","le","programme","tester"], "test n°1"
+    assert search.get_words("pour le programme tester.??!!\n") == ["pour","le","programme","tester"], 'test n°1'
     assert search.get_words("\tbonjour c'est le test.\n") == ["bonjour","cest","le","test"], 'test n°2'
-    assert search.get_words(" Ceci est une phrase de test, je ne sais pas trop quoi ecrire !!!  ") == ["ceci","est","une","phrase","de","test","je","ne","sais","pas","trop","quoi","ecrire"], "test n°3"
+    assert search.get_words(" Ceci est une phrase de test, je ne sais pas trop quoi ecrire !!!  ") == ["ceci","est","une","phrase","de","test","je","ne","sais","pas","trop","quoi","ecrire"], 'test n°3'
     assert search.get_words("Ct un prank, je c sais tro marrent! ") == ["ct","un","prank","je","c","sais","tro","marrent"], 'test n°4'
 
 def test_create_index():
