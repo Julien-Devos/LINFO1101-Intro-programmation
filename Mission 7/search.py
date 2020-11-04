@@ -3,12 +3,19 @@ def run_program(filename):
 
         Appelle la fonction print_lines(filename, l).
     """
-    words = input("\nEntrez une liste de mots: ")
-    l = words.lower().split(' ')
-    print_lines(filename, l)
+    while True:
+        words = input("\nEntrez une liste de mots (exit pour quitter): ")
+        l = words.lower().split(' ')
+        if l[0] == "exit":
+            raise SystemExit
+        print_lines(filename, l)
 
 def print_lines(filename, l):
-    get_lines(l,create_index(filename))
+    try:
+        print(get_lines(l,create_index(filename)))
+    except KeyError:
+        print("Un ou plusieurs mots que vous avez entrés ne se trouvent pas dans le fichier")
+
 
 def readfile(filename):
     """ Retourne une liste qui contient les lignes du fichier.
@@ -77,13 +84,10 @@ def get_lines(words,index):
 
         Returns:
             une liste des identifiants des lignes qui contiennent tous les mots de la liste words.
-
     """
-    #TODO execpt Key error  quand le mot donné n'est pas dans le fichier
     l = []
     for word in words:
         l.append([word, list(index[word])])
-    print(l)
     final_list = []
     for i in l[0][1]:
         count = 0
@@ -96,10 +100,12 @@ def get_lines(words,index):
             final_list.append(i)
     return final_list
 
-#get_lines(["musique","hans","zimmer"] ,create_index("text_exemple_1.txt")) == 9
-#get_lines(["vous","etes"] ,create_index("text_exemple_1.txt"))  == 0
-
 if __name__ == "__main__":
-    filename = input("\nDans quel fichier souhaitez-vous travailler? ")
     while True:
-        run_program(filename)
+        filename = input("\nDans quel fichier souhaitez-vous travailler? ")
+        try:
+            with open(filename, "r") as file:
+                run_program(filename)
+
+        except FileNotFoundError:
+            print("File not found!")

@@ -1,9 +1,0 @@
-Je ne sais pas quoi écrire mais je suis sûr que ça nous sera utile.
-Les différents mots se trouvent dans les listes de mots qui sont réparties sous forme de grande liste.
-Ne croyez pas que c'est vrai c'est pas vrai que les listes sont dans une grande liste c'est tout à fait faux.
-Ce qui est tout à fait surprenant c'est que je ne suis pas sûr que les mots retournerons vrai.
-Si le programme retourne faux, c'est que nous sommes dans la merde.
-Le sens n'a de sens que si je met du sens dans la liste.
-Cette liste n'a à la base aucun sens c'est pourquoi il est important d'y mettre du sens.
-Je sens que j'arrive à la fin des exemples pour le test, en espérant que ça nous sera utile.
-J'écris de ma merde mais peu important tant que ça a du sens.
