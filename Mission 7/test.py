@@ -2,7 +2,7 @@
 import search
 
 def test_readfile():
-    assert search.readfile("text_exemple_2.txt") == ["Bonjour moi\n","m'appelle cafe.\n","test c'est le test\n","pour le programme tester.??!!\n","parler france?! moi je :.\n","    pas tres"], 'test n°1'
+    assert search.readfile("text_exemple_2.txt") == ["Bonjour moi","m'appelle cafe.","test c'est le test","pour le programme tester.??!!","parler france?! moi je :.","pas tres"], 'test n°1'
     assert search.readfile("lefichierexistepas") == "File not found!", 'test n°2'
     assert search.readfile("ct_pas_un_bon_fichier_non_plus") == "File not found!", 'test n°3'
 

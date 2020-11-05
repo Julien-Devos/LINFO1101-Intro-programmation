@@ -31,7 +31,10 @@ def readfile(filename):
     """
     try:
         with open(filename, 'r') as file:
-            return file.readlines()
+            l = []
+            for i in file:
+                l.append(i.strip())
+            return l
     except FileNotFoundError:
         return "File not found!"
 
@@ -92,20 +95,24 @@ def get_lines(words,index):
         Returns:
             une liste des indexs des lignes qui contiennent tous les mots de la liste words.
     """
-    l = []
-    for word in words:
-        l.append([word, list(index[word])])
-    final_list = []
-    for i in l[0][1]:
-        count = 0
-        for j in range(1,len(l)):
-            for k in l[j][1]:
-                if k == i:
-                    count += 1
-                    break
-        if count == len(l)-1:
-            final_list.append(i)
-    return final_list
+    try:
+        l = []
+        for word in words:
+            l.append([word, list(index[word])])
+        final_list = []
+        for i in l[0][1]:
+            count = 0
+            for j in range(1,len(l)):
+                for k in l[j][1]:
+                    if k == i:
+                        count += 1
+                        break
+            if count == len(l)-1:
+                final_list.append(i)
+        return final_list
+    except:
+        print("The word is not in the file")
+        return []
 
 if __name__ == "__main__":
     while True:
