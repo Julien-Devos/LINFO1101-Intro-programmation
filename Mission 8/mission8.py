@@ -120,7 +120,7 @@ class Album :
         """
         Retourne un String décrivant l'album.
         """
-        album_text = "Album " + self.name + " ( " + str(self.dic["total_song"]) + " chansons, " + self.dic["total_time"] + ")\n"
+        album_text = "Album " + self.name + " (" + str(self.dic["total_song"]) + " chansons, " + self.dic["total_time"] + ")\n"
         for i in self.dic:
             if i != "total_time" and i != "total_song":
                 album_text += str(i) + ": " + self.dic[i]["song"].__str__() + "\n"
@@ -147,3 +147,10 @@ if __name__ == "__main__":
                 album = Album(str(count))
                 value = album.ajouter(Chanson(song[0], song[1], Duree(0, int(song[2]), int(song[3]))))
         print(album)
+
+        temps1 = Duree(15, 10, 52)
+        temps2 = Duree(0, 15, 32)
+        temps3 = Duree(3, 7, 1)
+        temps4 = Duree(127, 64, 87)
+        temps4.ajouter(temps1)
+        print(temps4)
