@@ -72,13 +72,13 @@ def test_Duree_ajouter():
 
 # CREATION DE DEUX OBJET DE LA CLASSE Duree ET APPEL DES DIFFERENTES METHODES TEST
 
-d1 = Duree(10, 20, 59)
-d2 = Duree(8, 41, 25)
-test_Duree_str(d1, d2)
-test_Duree_to_secondes(d1, d2)
-test_Duree_delta(d1, d2)
-test_Duree_apres(d1, d2)
-test_Duree_ajouter(d1, d2)
+#d1 = Duree(10, 20, 59)
+#d2 = Duree(8, 41, 25)
+#test_Duree_str(d1, d2)
+#test_Duree_to_secondes(d1, d2)
+#test_Duree_delta(d1, d2)
+#test_Duree_apres(d1, d2)
+#test_Duree_ajouter(d1, d2)
 
 
 ################################
@@ -86,10 +86,21 @@ test_Duree_ajouter(d1, d2)
 ################################
 
 # TEST DE LA METHODE __str__ DE LA CLASSE Chanson
+d1 = Duree(0, 3, 20)
+d2 = Duree(0, 0, 28)
+d3 = Duree(0, 0, 40)
+d4 = Duree(0, 4, 10)
 
-def test_Chanson_str(chanson):
-    # A COMPLETER PAR LES ETUDIANTS
-    pass
+def test_Chanson_str():
+    chanson1 = Chanson ("Confinés","Joyca",d1)
+    chanson2 = Chanson ("Chamrousse","Joyca",d2)
+    chanson3 = Chanson ("Les glaces","Joyca",d3)
+    chanson4 = Chanson ("Jacquadi","POLO & PAN",d4)
+    assert chanson1.__str__() == "On est confinés - Joyca - 15:10:52"
+    assert chanson2.__str__() == "Chamrousse - Joyca - 00:00:28"
+    assert chanson3.__str__() == "Les glaces - Joyca - 00:00:40"
+    assert chanson4.__str__() == "Jacquadi - POLO & PAN - 00:04:10"
+
 
 
 # CREATION D'UN OBJET DE LA CLASSE Chanson ET APPEL DES DIFFERENTES METHODES TEST
