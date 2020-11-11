@@ -26,6 +26,7 @@ def test_Duree_str():
     assert temps4.__str__() == "128:05:27", "Test 4 Duree __str__"
 
 
+
 # TEST DE LA METHODE toSecondes DE LA CLASSE Duree
 
 def test_Duree_to_secondes():
