@@ -13,42 +13,61 @@ from mission8 import Duree, Chanson, Album
 
 
 # TEST DE LA METHODE __str__ DE LA CLASSE Duree
+temps1 = Duree(15,10,52)
+temps2 = Duree(0,15,32)
+temps3 = Duree(3,7,1)
+temps4 = Duree(127,64,87)
 
-def test_Duree_str(duree1, duree2):
-    assert duree1.__str__() == "10:20:59", "Test 1 Duree __str__"
-    assert duree2.__str__() == "08:41:25", "Test 2 Duree __str__"
-    # A COMPLETER EVENTUELLEMENT PAR LES ETUDIANTS
+def test_Duree_str():
+
+    assert temps1.__str__() == "15:10:52", "Test 1 Duree __str__"
+    assert temps2.__str__() == "00:15:32", "Test 2 Duree __str__"
+    assert temps3.__str__() == "03:07:01", "Test 3 Duree __str__"
+    assert temps4.__str__() == "128:05:27", "Test 4 Duree __str__"
 
 
 # TEST DE LA METHODE toSecondes DE LA CLASSE Duree
 
-def test_Duree_to_secondes(duree1, duree2):
-    assert duree1.to_secondes() == 37259, "Test 1 Duree toSecondes"
-    assert duree2.to_secondes() == 31285, "Test 2 Duree toSecondes"
-    # A COMPLETER EVENTUELLEMENT PAR LES ETUDIANTS
+def test_Duree_to_secondes():
+    assert temps1.to_secondes() == 54652, "Test 1 Duree toSecondes"
+    assert temps2.to_secondes() == 932, "Test 2 Duree toSecondes"
+    assert temps3.to_secondes() == 11221, "Test 3 Duree toSecondes"
+    assert temps4.to_secondes() == 461127, "Test 4 Duree toSecondes"
 
 
 # TEST DE LA METHODE delta DE LA CLASSE Duree
 
-def test_Duree_delta(duree1, duree2):
-    # A COMPLETER PAR LES ETUDIANTS
-    pass
+def test_Duree_delta():
+    assert temps1.delta(temps2) == -53720, "Test 1 Duree delta"
+    assert temps2.delta(temps1) == 53700, "Test 2 Duree delta"
+    assert temps3.delta(temps4) == 449906, "Test 3 Duree delta"
+    assert temps4.delta(temps1) == -406475, "Test 4 Duree delta"
 
 
 # TEST DE LA METHODE apres DE LA CLASSE Duree
 
-def test_Duree_apres(duree1, duree2):
-    duree0 = Duree(0, 0, 0)
-    assert duree1.apres(duree2), "Test 1 Duree apres"
-    assert not duree0.apres(duree1), "Test 2 Duree apres"
-    # A COMPLETER PAR LES ETUDIANTS
+def test_Duree_apres():
+    assert temps1.apres(temps2), "Test 1 Duree apres"
+    assert not temps2.apres(temps1), "Test 2 Duree apres"
+    assert temps3.apres(temps4), "Test 3 Duree apres"
+    assert not temps4.apres(temps1), "Test 4 Duree apres"
 
 
 # TEST DE LA METHODE ajouter DE LA CLASSE Duree
 
-def test_Duree_ajouter(duree1, duree2):
-    # A COMPLETER PAR LES ETUDIANTS
-    pass
+def test_Duree_ajouter():
+    temps1.ajouter(temps2)
+    assert temps1.__str__ == "15:26:24"
+    temps2.ajouter(temps1)
+    assert temps2.__str__ == "15:41:56"
+    temps1 = Duree(15,10,52)
+    temps2 = Duree(0,15,32)
+    temps3.ajouter(temps4)
+    assert temps3.__str__ == "131:12:28"
+    temps3 = Duree(3,7,1)
+    temps4.ajouter(temps1)
+    assert temps4.__str__ == "143:16:19"
+    temps4 = Duree(127,64,87)
 
 
 # CREATION DE DEUX OBJET DE LA CLASSE Duree ET APPEL DES DIFFERENTES METHODES TEST
