@@ -96,7 +96,7 @@ def test_Chanson_str():
     chanson2 = Chanson ("Chamrousse","Joyca",d2)
     chanson3 = Chanson ("Les glaces","Joyca",d3)
     chanson4 = Chanson ("Jacquadi","POLO & PAN",d4)
-    assert chanson1.__str__() == "On est confinés - Joyca - 15:10:52"
+    assert chanson1.__str__() == "On est confinés - Joyca - 00:03:20"
     assert chanson2.__str__() == "Chamrousse - Joyca - 00:00:28"
     assert chanson3.__str__() == "Les glaces - Joyca - 00:00:40"
     assert chanson4.__str__() == "Jacquadi - POLO & PAN - 00:04:10"
@@ -113,9 +113,20 @@ test_Chanson_str(c)
 ##############################
 
 # TEST DE LA METHODE __str__ DE LA CLASSE Album
-# (A COMPLETER PAR LES ETUDIANTS)
+def test_Album_str():
+    album = Album("test")
+    album.ajouter(Chanson("Confinés", "Joyca", Duree(0, 3, 20)))
+    album.ajouter(Chanson("Chamrousse", "Joyca", Duree(0, 0, 28)))
+    album.ajouter(Chanson("Les glaces", "Joyca", Duree(0, 0, 40)))
+    album.ajouter(Chanson("Jacquadi", "POLO & PAN", Duree(0, 4, 10)))
 
-# TEST DE LA METHODE add DE LA CLASSE Album
+    assert album.__str__() == ("Album " + test + " ( " + 4 + " chansons, " + "00:08:38" + ")\n"
+                               "1: Confinés - Joyca - 00:03:20\n"
+                               "2: Chamrousse - Joyca - 00:00:28\n"
+                               "3: Les glaces - Joyca - 00:00:40\n"
+                               "4: Jacquadi - POLO & PAN - 00:04:10\n")
+
+# TEST DE LA METHODE AJOUTER DE LA CLASSE Album
 # (A COMPLETER PAR LES ETUDIANTS)
 
 # CREATION D'UN OBJET DE LA CLASSE Album ET APPEL DES DIFFERENTES METHODES TEST
