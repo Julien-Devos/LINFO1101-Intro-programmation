@@ -35,7 +35,7 @@ class Duree:
         Retourne la différence entre cette instance de Duree (self) et la Duree d passée en paramètre,
         en secondes (positif si ce temps-ci est plus grand).
         """
-        diff = d.to_secondes() - self.to_secondes()
+        diff = self.to_secondes() - d.to_secondes()
         return diff
 
     def apres(self, d):
@@ -43,7 +43,7 @@ class Duree:
         Retourne True si cette instance de Duree (self) est plus grand que la Duree d passée en paramètre;
         retourne False sinon.
         """
-        if self.delta(d) < 0:
+        if self.delta(d) > 0:
             return True
         else:
             return False
@@ -99,7 +99,7 @@ class Album :
         self.total_duree = Duree(0,0,0)
         self.dic = {"total_time":0,"total_song":0}
 
-    def ajouter(self,song):
+    def add(self,song):
         """ Ajoute une musique à self.dic le dictionaire de l'album
 
             Args:
@@ -140,17 +140,10 @@ if __name__ == "__main__":
         count = 1
         for song_number in range(len(song_list)):
             song = song_list[song_number].split(" ")
-            value = album.ajouter(Chanson(song[0],song[1],Duree(0,int(song[2]),int(song[3]))))
+            value = album.add(Chanson(song[0],song[1],Duree(0,int(song[2]),int(song[3]))))
             if value == False:
                 count += 1
                 print(album)
                 album = Album(str(count))
-                value = album.ajouter(Chanson(song[0], song[1], Duree(0, int(song[2]), int(song[3]))))
+                value = album.add(Chanson(song[0], song[1], Duree(0, int(song[2]), int(song[3]))))
         print(album)
-
-        temps1 = Duree(15, 10, 52)
-        temps2 = Duree(0, 15, 32)
-        temps3 = Duree(3, 7, 1)
-        temps4 = Duree(127, 64, 87)
-        temps4.ajouter(temps1)
-        print(temps4)

@@ -36,10 +36,10 @@ def test_Duree_to_secondes():
 
 # TEST DE LA METHODE delta DE LA CLASSE Duree
 def test_Duree_delta():
-    assert temps1.delta(temps2) == -53720, "Test 1 Duree delta"
-    assert temps2.delta(temps1) == 53720, "Test 2 Duree delta"
-    assert temps3.delta(temps4) == 449906, "Test 3 Duree delta"
-    assert temps4.delta(temps1) == -406475, "Test 4 Duree delta"
+    assert temps1.delta(temps2) == 53720, "Test 1 Duree delta"
+    assert temps2.delta(temps1) == -53720, "Test 2 Duree delta"
+    assert temps3.delta(temps4) == -449906, "Test 3 Duree delta"
+    assert temps4.delta(temps1) == 406475, "Test 4 Duree delta"
 
 
 # TEST DE LA METHODE apres DE LA CLASSE Duree
@@ -93,10 +93,10 @@ def test_Chanson_str():
 # TEST DE LA METHODE __str__ DE LA CLASSE Album
 def test_Album_str():
     album = Album("test")
-    album.ajouter(Chanson("Confinés", "Joyca", Duree(0, 3, 20)))
-    album.ajouter(Chanson("Chamrousse", "Joyca", Duree(0, 0, 28)))
-    album.ajouter(Chanson("Les glaces", "Joyca", Duree(0, 0, 40)))
-    album.ajouter(Chanson("Jacquadi", "POLO & PAN", Duree(0, 4, 10)))
+    album.add(Chanson("Confinés", "Joyca", Duree(0, 3, 20)))
+    album.add(Chanson("Chamrousse", "Joyca", Duree(0, 0, 28)))
+    album.add(Chanson("Les glaces", "Joyca", Duree(0, 0, 40)))
+    album.add(Chanson("Jacquadi", "POLO & PAN", Duree(0, 4, 10)))
 
     assert album.__str__() == ("Album test (4 chansons, 00:08:38)\n"
                                "1: Confinés - Joyca - 00:03:20\n"
