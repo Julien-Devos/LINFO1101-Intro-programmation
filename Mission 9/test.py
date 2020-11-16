@@ -1,5 +1,5 @@
 """
-    Tests fournis pour la mission 9; Ã  complÃ©ter par les Ã©tudiants.
+    Tests fournis pour la mission 9; à  complèter par les étudiants.
     @author Kim Mens
     @version 8 novembre 2020
 """

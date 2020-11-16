@@ -1,5 +1,5 @@
 """
-    Classes fournies pour la mission 9; Ã  complÃ©ter par les Ã©tudiants.
+    Classes fournies pour la mission 9; à  compléter par les étudiants.
     @author Kim Mens
     @version 8 novembre 2020
 """
@@ -9,12 +9,12 @@
 ###############
 
 """
-    Cette classe reprÃ©sente un Article de facture simple,
+    Cette classe représente un Article de facture simple,
     comprenant un descriptif et un prix.
 
     @author Kim Mens
     @version 18 novembre 2018
-    (code adaptÃ© du code java de Charles Pecheur)
+    (code adapté du code java de Charles Pecheur)
 """
 
 
@@ -46,7 +46,7 @@ class Article:
 
     def taux_tva(self):
         """
-        Retourne le taux de TVA (mÃªme valeur pour chaque article)
+        Retourne le taux de TVA (même valeur pour chaque article)
         """
         return Article.getTVA()
 
@@ -74,25 +74,28 @@ class Article:
 ###############
 
 """
-    Cette classe reprÃ©sente une Facture, sous forme d'une liste d'articles.
+    Cette classe représente une Facture, sous forme d'une liste d'articles.
 
     @author Kim Mens
     @version 18 novembre 2018
-    (code adaptÃ© du code java de Charles Pecheur)
+    (code adapté du code java de Charles Pecheur)
 """
 
 
 class Facture:
+    __fact_number = 1
 
     def __init__(self, description, articles):
         """
-        CrÃ©e une facture avec une description (titre) et une liste d'articles.
-        @pre  description est un string court dÃ©crivant la facture
+        Crée une facture avec une description (titre) et une liste d'articles.
+        @pre  description est un string court décrivant la facture
               articles est une liste d'objets de type Article
-        @post Une facture avec une description (titre) et un liste d'articles a Ã©tÃ© crÃ©e.
+        @post Une facture avec une description (titre) et un liste d'articles a été créée.
         """
         self.__reference = description
         self.__articles = articles
+        self.__number = Facture.__fact_number
+        Facture.__fact_number += 1
 
     def description(self):
         """
@@ -108,7 +111,7 @@ class Facture:
 
     def __str__(self):
         """
-        Retourne la reprÃ©sentation string d'une facture, Ã  imprimer avec la mÃ©thode print().
+        Retourne la représentation string d'une facture, à  imprimer avec la méthode print().
         """
         s = self.entete_str()
         totalPrix = 0.0
@@ -122,9 +125,9 @@ class Facture:
 
     def entete_str(self):
         """
-        Imprime l'entÃªte de la facture, comprenant le descriptif et les tÃªtes de colonnes.
+        Imprime l'entête de la facture, comprenant le descriptif et les têtes de colonnes.
         """
-        e = "Facture " + self.description() + "\n"
+        e = "Facture No " + str(self.__number) + " : " + self.description() + "\n"
         e += self.barre_str()
         e += "| {0:<40} | {1:>10} | {2:>10} | {3:>10} |\n".format("Description", "prix HTVA", "TVA", "prix TVAC")
         e += self.barre_str()
@@ -132,7 +135,7 @@ class Facture:
 
     def barre_str(self):
         """
-        Retourne un string reprÃ©sentant une barre horizontale sur la largeur de la facture.
+        Retourne un string représentant une barre horizontale sur la largeur de la facture.
         """
         b = ""
         barre_longeur = 83
@@ -142,30 +145,127 @@ class Facture:
 
     def article_str(self, art):
         """
-        Retourne un string correspondant Ã  une ligne de facture pour l'article art
+        Retourne un string correspondant à  une ligne de facture pour l'article art
         """
-        return "| {0:40} | {1:10.2f} | {2:10.2f} | {3:10.2f} |\n".format(art.description(), art.prix(), art.tva(),
-                                                                         art.prix_tvac())
+        return "| {0:40} | {1:10.2f} | {2:10.2f} | {3:10.2f} |\n".format(art.description(), art.prix(), art.tva(), art.prix_tvac())
 
     def totaux_str(self, prix, tva):
         """
-        Retourne un string reprÃ©sentant une ligne de facture avec les totaux prix et tva, Ã  imprimer en bas de la facture
+        Retourne un string représentant une ligne de facture avec les totaux prix et tva, à  imprimer en bas de la facture
         """
         b = self.barre_str()
         b += "| {0:40} | {1:10.2f} | {2:10.2f} | {3:10.2f} |\n".format("T O T A L", prix, tva, prix + tva)
         b += self.barre_str()
         return b
 
-    # Cette mÃ©thode doit Ãªtre ajoutÃ©e lors de l'Ã©tape 4 de la miasion
+    # Cette méthode doit être ajoutée lors de l'étape 4 de la mission
     def nombre(self, pce):
         """
-        Retourne le nombre d'exemplaires de la piÃ¨ce pce dans la facture, en totalisant sur tous les articles qui concernent cette piÃ¨ce.
+        Retourne le nombre d'exemplaires de la Piece pce dans la facture, en totalisant sur tous les articles qui concernent cette pièce.
         """
-        pass
+        count = 0
+        for i in self.__articles:
+            if i.description() == pce.description():
+                count += 1
+        return count
 
-    # Cette mÃ©thode doit Ãªtre ajoutÃ©e lors de l'Ã©tape 5 de la miasion
+
+    # Cette méthode doit être ajoutée lors de l'étape 5 de la mission
     def livraison_str(self):
         """
-        Cette mÃ©thode est une mÃ©thode auxiliaire pour la mÃ©thode printLivraison
+        Cette méthode est une méthode auxiliaire pour la méthode printLivraison
         """
-        pass
+        e = "Livraison - Facture No " + str(self.__number) + " : " + self.description() + "\n"
+        e += self.barre_str()
+        e += "| {0:<40} | {1:>10} | {2:>10} | {3:>10} |\n".format("Description", "poids/pce", "nombre", "poids")
+        e += self.barre_str()
+        total_art, total_nbr, total_poids= 0, 0, 0
+        for art in self.__articles:
+            if type(art) == ArticlePiece:
+                total_art += 1
+                total_poids += art.piece().poids()*art.nombre()
+                total_nbr += art.nombre()
+                e += "| {0:40} | {1:8.3f}kg | {2:10} | {3:8.3f}kg |\n".format(art.piece().description(), art.piece().poids(), art.nombre(), art.piece().poids()*art.nombre())
+        e += self.barre_str()
+        e += "| {0:40} | {1:10} | {2:10} | {3:8.3f}kg |\n".format((str(total_art) + " articles"), "", total_nbr, total_poids)
+        e += self.barre_str()
+        return e
+
+class ArticleReparation(Article):
+
+    def __init__(self,d):
+        super().__init__("Réparation",20 + 35*d)
+        self.__duree = d
+
+    def get_duree(self):
+        return self.__duree
+
+    def description(self):
+        """
+        Retourne la réparation.
+        """
+        return super().description()
+
+    def prix(self):
+        """
+        Retourne le prix (HTVA) de la réparation.
+        """
+        return super().prix()
+
+class Piece:
+
+    def __init__(self,d,prix,poids = 0,fragile = False,reduc = False):
+        self.__description = d
+        self.__prix = prix
+        self.__poids = poids
+        self.__is_fragile = fragile
+        self.__tva_reduc = reduc
+
+    def description(self):
+        return self.__description
+
+    def prix(self):
+        return self.__prix
+
+    def poids(self):
+        return self.__poids
+
+    def fragile(self):
+        return self.__is_fragile
+
+    def tva_reduit(self):
+        return self.__reduc
+
+    def __eq__(self,other):
+        return self.__description == other.__description and self.__prix == other.__prix
+
+class ArticlePiece(Article):
+
+    def __init__(self,n,piece):
+        self.__nombre = n
+        self.__piece = piece
+
+    def nombre(self):
+        return self.__nombre
+
+    def piece(self):
+        return self.__piece
+
+    def description(self):
+        return str(self.__nombre) + " * " + self.__piece.description() + " @ " + str(self.__piece.prix())
+
+    def prix(self):
+        return self.__piece.prix() * self.__nombre
+
+    def tva(self):
+        if self.__piece.tva_reduit() == True:
+            return 6
+        return self.__piece.tva()
+
+
+if __name__ == "__main__":
+    d1 = ArticlePiece(3,Piece("Souris", 15, 0.150))
+    d2 = ArticlePiece(2,Piece("clavier RGB", 150, 1.300))
+    d3 = ArticlePiece(2,Piece("clavier", 30, 0.200))
+    c = Facture("Yo", [d1,d2,d3])
+    print(c.livraison_str())
