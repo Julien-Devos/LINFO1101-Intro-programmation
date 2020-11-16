@@ -88,6 +88,7 @@ def dictionary():
         for line in file:
             sorted_file.append(tuple(line.strip().split(',')))
         sorted_file = sorted(sorted_file)
+        print(sorted_file)
         return "Read " + filename + " as a Dictionary"
 
 def search(name):
