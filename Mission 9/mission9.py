@@ -177,7 +177,7 @@ class Facture:
         """
         e = "Livraison - Facture No " + str(self.__number) + " : " + self.description() + "\n"
         e += self.barre_str()
-        e += "| {0:<40} | {1:>10} | {2:>10} | {3:>10} |\n".format("Description", "poids/pce", "nombre", "poids")
+        e += "| {0:40} | {1:>10} | {2:>10} | {3:>10} |\n".format("Description", "poids/pce", "nombre", "poids")
         e += self.barre_str()
         total_art, total_nbr, total_poids, count = 0, 0, 0, 0
         for art in self.__articles:
@@ -194,7 +194,7 @@ class Facture:
         e += "| {0:40} | {1:10} | {2:10} | {3:8.3f}kg |\n".format((str(total_art) + " articles"), "", total_nbr, total_poids)
         e += self.barre_str()
         if count > 0:
-            e += " (!) *** livraison fragile ***"
+            e += " (!) *** livraison fragile ***\n"
         return e
 
 class ArticleReparation(Article):
@@ -278,7 +278,7 @@ class Piece:
         """
             Retourne True si en TVA réduit et false si non
         """
-        return self.__reduc
+        return self.__tva_reduc
 
     def __eq__(self,other):
         """
@@ -331,12 +331,21 @@ class ArticlePiece(Article):
         """
         if self.__piece.tva_reduit() == True:
             return 6
-        return self.__piece.tva()
+        return 21
+
+    def __str__(self):
+        return self.description() + ": " + str(self.prix())+ "€  " + \
+               str(self.piece().poids()) + "kg  Fragile: " + str(self.piece().fragile()) + "  TVA " + str(self.tva()) + "%"
 
 
 if __name__ == "__main__":
     d1 = ArticlePiece(3,Piece("Souris", 15, 0.150))
-    d2 = ArticlePiece(2,Piece("clavier RGB", 150, 1.300))
-    d3 = ArticlePiece(2,Piece("clavier", 30, 0.200))
-    c = Facture("Yo", [d1,d2,d3])
+    d2 = ArticlePiece(2,Piece("clavier RGB", 150, 1.300, True))
+    d3 = ArticlePiece(10,Piece("clavier", 30, 0.200))
+    c = Facture("Votre Bon de livraison", [d1,d2,d3])
+
+    a1 = Article("Souris", 15)
+    a2 = Article("clavier RGB", 150)
+    a3 = Article("clavier", 30)
+    print(Facture("Votre Facture", [d1,d2,d3]))
     print(c.livraison_str())
