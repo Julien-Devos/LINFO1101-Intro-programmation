@@ -349,3 +349,4 @@ if __name__ == "__main__":
     a3 = Article("clavier", 30)
     print(Facture("Votre Facture", [d1,d2,d3]))
     print(c.livraison_str())
+#test
