@@ -5,6 +5,11 @@ import math  # nous avons besoin des fonctions cos et sin pour notre calcul de l
 class XYRobot:
 
     def __init__(self, n):
+        """ Initialise un objet de type XYRobot
+
+            Args:
+                n: str: nom du robot
+        """
         # nom du robot
         self.__nom__ = n
         # position du robot
@@ -23,12 +28,15 @@ class XYRobot:
             self.getangle())
 
     def getnom(self):
+        """ Returns: le nom du robot """
         return self.__nom__
 
     def getx(self):
+        """ Returns: la coord en x """
         return self.__x
 
     def gety(self):
+        """ Returns: la coord en y """
         return self.__y
 
     def getanglerad(self):
@@ -40,21 +48,27 @@ class XYRobot:
         return (self.__angle * 180 / math.pi) % 360
 
     def getHistory(self):
+        """ Returns: l'historique des mouvements """
         return self.__history
 
     def clearHistory(self):
+        """ Permet de suprimer l'historique """
         self.__history = []
 
     def setx(self, x):
+        """ Permet de définir la coord x """
         self.__x = x
 
     def sety(self, y):
+        """ Permet de définir la coord y """
         self.__y = y
 
     def position(self):
+        """ Returns: un tuple des coords du robot -> (x, y) """
         return (self.getx(), self.gety())
 
     def unplay(self):
+        """ Permet de rejouer toutes les actions de l'historique à l'envers """
         hist = []
         for i in self.getHistory():
             hist.append(i)
@@ -75,6 +89,7 @@ class XYRobot:
 
 
     def __drawFrom(self, oldx, oldy):
+        """ Dessine le mouvement effectué sur la fenêtre graphics """
         line = Line(Point(oldx, oldy), Point(self.getx(), self.gety()))
         line.draw(self.__win)
 
@@ -123,6 +138,7 @@ class XYRobot:
 
 # Exemple d'utilisation de cette classe (il suffit d'exÃ©cuter ce fichier)
 if __name__ == '__main__':
+    """ Exemple de test de la classe XYRobot """
     r2d2 = XYRobot("R2-D2")
 
     # first move to position (100,100) facing East, to be more or less in the center of the window

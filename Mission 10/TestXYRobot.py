@@ -85,3 +85,6 @@ class XYRobotTest(unittest.TestCase):
         self.r.unplay()
         self.assertEqual(self.r.position(), (x, y), "¯\_(ツ)_/¯")
         self.assertEqual(self.r.getangle(), expected_angle, "¯\_(ツ)_/¯")
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
