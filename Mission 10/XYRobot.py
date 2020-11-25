@@ -15,6 +15,7 @@ class XYRobot:
         # fenêtre graphique sur laquelle le chemin du robot sera tracÃ©
         # (le point à  la position (0,0) se trouve dans le coin supérieur gauche)
         self.__win = GraphWin()
+        self.__history = []
 
     def __str__(self):
         """Imprime un string du type "R2-D2@(100,100) angle: 0.0" reprÃ©sentant les coordonnÃ©es du robot."""
@@ -38,6 +39,12 @@ class XYRobot:
         """returns the angle in degrees"""
         return (self.__angle * 180 / math.pi) % 360
 
+    def getHistory(self):
+        return self.__history
+
+    def clearHistory(self):
+        self.__history = []
+
     def setx(self, x):
         self.__x = x
 
@@ -46,6 +53,26 @@ class XYRobot:
 
     def position(self):
         return (self.getx(), self.gety())
+
+    def unplay(self):
+        hist = []
+        for i in self.getHistory():
+            hist.append(i)
+        hist.reverse()
+        for event, value in hist:
+            if event == "forward":
+                self.movebackward(value)
+
+            elif event == "backward":
+                self.moveforward(value)
+
+            elif event == "right":
+                self.turnleft()
+
+            elif event == "left":
+                self.turnright()
+        self.clearHistory()
+
 
     def __drawFrom(self, oldx, oldy):
         line = Line(Point(oldx, oldy), Point(self.getx(), self.gety()))
@@ -67,10 +94,12 @@ class XYRobot:
     def moveforward(self, distance):
         """ fait avancer le robot de distances pixels et trace une ligne lors de ce mouvement """
         self.__move(distance, 1)
+        self.__history.append(("forward", distance))
 
     def movebackward(self, distance):
         """ fait reculer le robot de distances pixels et trace une ligne lors de ce mouvement """
         self.__move(distance, -1)
+        self.__history.append(("backward", distance))
 
     def __turn(self, direction):
         """ mÃ©thode auxiliaire pour les mÃ©thodes turnright() et turnleft()
@@ -83,11 +112,13 @@ class XYRobot:
         """ fait tourner le robot de 90 degrÃ©s vers la droite (dans le sens des aiguilles d'une montre)
         """
         self.__turn(1)
+        self.__history.append(("right",90))
 
     def turnleft(self):
         """ fait tourner le robot de 90 degrÃ©s vers la gauche (dans le sens contraire des aiguilles d'une montre)
         """
         self.__turn(-1)
+        self.__history.append(("left", 90))
 
 
 # Exemple d'utilisation de cette classe (il suffit d'exÃ©cuter ce fichier)
@@ -129,6 +160,7 @@ if __name__ == '__main__':
     r2d2.moveforward(50)
     r2d2.turnright()
     print(r2d2)
+    r2d2.unplay()
     while True:
-        input("press any key to close")
+        input("press enter to close")
         break

@@ -1,5 +1,6 @@
 import unittest
-import TurtleBot as tb
+#import TurtleBot as tb    # test the TurtleBot.py file
+import Robot as tb    # test the Robot.py file
 
 class TestTurtleBot(unittest.TestCase):
 
@@ -12,7 +13,7 @@ class TestTurtleBot(unittest.TestCase):
 
     def test_turnleft(self):
         expected_position = self.t.position()
-        expected_angle = (self.t.getangle() + 90) % 360
+        expected_angle = (self.t.getangle() - 90) % 360
         self.t.turnleft()
         # below we are using assertAlmostEqual instead if assertEqual to allow for inaccurate calculations
         self.assertAlmostEqual(self.t.getangle(), expected_angle, msg = "Your turtleBot took a wrong turn or did not update its angle while turning left")
@@ -20,7 +21,7 @@ class TestTurtleBot(unittest.TestCase):
 
     def test_turnright(self):
         expected_position = self.t.position()
-        expected_angle = (self.t.getangle() - 90) % 360
+        expected_angle = (self.t.getangle() + 90) % 360
         self.t.turnright()
         self.assertAlmostEqual(self.t.getangle(), expected_angle, msg = "Your turtleBot took a wrong turn or did not update its angle while turning right")
         self.assertEqual(self.t.position(), expected_position, "Your turtleBot changed position while turning right")
@@ -62,6 +63,44 @@ class TestTurtleBot(unittest.TestCase):
         self.t.moveforward(50)
         self.assertAlmostEqual(self.t.getangle(), expected_angle, msg = "Your turtleBot took a wrong turn or did not update its angle")
         self.assertEqual(self.t.position(), expected_position, "Your turtleBot changed position while turning")
+
+    def test_getHistory(self):
+        expected_History = [("forward",100),("left",90),("backward",152),("right",90),("forward",120),("forward",50)]
+        self.t.moveforward(100)
+        self.t.turnleft()
+        self.t.movebackward(152)
+        self.t.turnright()
+        self.t.moveforward(120)
+        self.t.moveforward(50)
+        self.assertEqual(self.t.getHistory(), expected_History, "The History is not correct")
+
+    def test_unplay(self):
+        x,y = self.t.position()
+        expected_angle = self.t.getangle()
+        self.t.moveforward(50)
+        self.assertEqual(self.t.position(), (x + 50, y), "¯\_(ツ)_/¯")
+        self.assertEqual(self.t.getangle(), expected_angle, "¯\_(ツ)_/¯")
+        self.t.unplay()
+        self.assertEqual(self.t.position(), (x, y), "¯\_(ツ)_/¯")
+        self.assertEqual(self.t.getangle(), expected_angle, "¯\_(ツ)_/¯")
+        self.t.movebackward(50)
+        self.assertEqual(self.t.position(), (x - 50, y), "¯\_(ツ)_/¯")
+        self.assertEqual(self.t.getangle(), expected_angle, "¯\_(ツ)_/¯")
+        self.t.unplay()
+        self.assertEqual(self.t.position(), (x, y), "¯\_(ツ)_/¯")
+        self.assertEqual(self.t.getangle(), expected_angle, "¯\_(ツ)_/¯")
+        self.t.turnright()
+        self.assertEqual(self.t.position(), (x, y), "¯\_(ツ)_/¯")
+        self.assertEqual(self.t.getangle(), (expected_angle + 90) % 360, "¯\_(ツ)_/¯")
+        self.t.unplay()
+        self.assertEqual(self.t.position(), (x, y), "¯\_(ツ)_/¯")
+        self.assertEqual(self.t.getangle(), expected_angle, "¯\_(ツ)_/¯")
+        self.t.turnleft()
+        self.assertEqual(self.t.position(), (x, y), "¯\_(ツ)_/¯")
+        self.assertEqual(self.t.getangle(), (expected_angle - 90) % 360, "¯\_(ツ)_/¯")
+        self.t.unplay()
+        self.assertEqual(self.t.position(), (x, y), "¯\_(ツ)_/¯")
+        self.assertEqual(self.t.getangle(), expected_angle, "¯\_(ツ)_/¯")
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
