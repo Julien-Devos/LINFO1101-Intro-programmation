@@ -9,7 +9,7 @@ class Main :
     """
     Classe principale pour la mission 11.
     @author  Kim Mens, UCLouvain
-    @version 01 DÃ©cembre 2019
+    @version 01 Décembre 2019
     """
 
     coureurs = [ Coureur("Alfred", 24), \
@@ -22,34 +22,34 @@ class Main :
 
     @classmethod
     def main(cls) :
-        # CrÃ©er un classement initialement vide pour la course
+        # Créer un classement initialement vide pour la course
         cl = Classement()
         # Boucle infinie
         while True :      
-            # Choisir alÃ©atoirement un coureur de la liste
+            # Choisir aléatoirement un coureur de la liste
             c = random.choice(cls.coureurs)
             # Lui assigner un temps entre 1000 et 5000 secondes
             t = Temps()
             t.add_secondes(random.randint(1000, 5000))
-            # CrÃ©er un rÃ©sultat pour ce coureur avec ce temps
+            # Créer un résultat pour ce coureur avec ce temps
             r = Resultat(c, t)
             print(r)
-            # Cherche le dernier rÃ©sultat de ce coureur dans le classement.
+            # Cherche le dernier résultat de ce coureur dans le classement.
             r1 = cl.get(r.coureur())
             # Imprime le classement actuel de coureur dans le classement.
             if r1 is None :
-                print("  Pas encore classÃ©")
+                print("  Pas encore classé")
             else:
-                print("  Actuellement classÃ© " + str(cl.get_position(c)))
-                print("  Dernier temps enregistrÃ© = " + str(r1.temps()))
-            # Compare son dernier rÃ©sultat stockÃ© avec son nouveau rÃ©sultat
+                print("  Actuellement classé " + str(cl.get_position(c)))
+                print("  Dernier temps enregistré = " + str(r1.temps()))
+            # Compare son dernier résultat stocké avec son nouveau résultat
             if r1 is not None and r >= r1 :
-                print("  Moins bon temps, ignorÃ©")
+                print("  Moins bon temps, ignoré")
             else :
-                print("  Nouveau temps est meilleur; sera enregistrÃ©")
+                print("  Nouveau temps est meilleur; sera enregistré")
                 cl.remove(c)
                 cl.add(r)
-                print("  Maintenant classÃ© " + str(cl.get_position(c)));
+                print("  Maintenant classé " + str(cl.get_position(c)));
                 print()
                 print("CLASSEMENT:")
                 print(cl)
