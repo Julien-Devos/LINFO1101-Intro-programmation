@@ -1,3 +1,5 @@
+from ordered_linked_list import OrderedLinkedList
+
 class Classement :
     """
     Une implémentation primitive de classement, non ordonnée et de capacité fixe.
@@ -12,7 +14,7 @@ class Classement :
         @pre: -
         @post: un classement vide de taille 0 a été créé
         """
-        self.__resultats = {}   # dictionnaire de résultats actuelle (clé = coureur; valeur = résultat)
+        self.__resultats = OrderedLinkedList()   # liste chainée ordonnée
         self.__size = 0         # nombre de résultats actuel (initialement 0, maximum __maxcapacity)
 
     def size(self):
@@ -38,7 +40,7 @@ class Classement :
             raise Error("Capacity of classement exceeded")
         else :
             self.__size += 1
-            self.__resultats[r.coureur()] = r
+            self.__resultats.add(r)
 
     def get(self,c):
         """
@@ -64,7 +66,7 @@ class Classement :
                     A vous de la corriger en utilisant une liste chaÃ®née ordonnée
                     comme structure de données, plutÃ´t qu'une simple dictionnaire.
         """
-        return "***position inconnue***"
+        return self.__resultats.get_position(c)
 
     def remove(self,c):
         """
@@ -75,7 +77,7 @@ class Classement :
               of False si c n'est pas trouvé dans la liste.
         """
         self.__size -= 1
-        return self.__resultats.pop(c,False)
+        return self.__resultats.remove(c)
 
     def __str__(self):
         """
@@ -86,7 +88,13 @@ class Classement :
                avec une ligne par résultat.
         """
         s = ""
-        d = self.__resultats
-        for c in d:
-            s += "  " + str(self.get_position(c)) + " > " + str(d[c]) + "\n"
+        d = self.__resultats.first()
+        if d is None:
+            s += "  " + str(self.get_position(d.value()[0])) + " > " + str(d.value()[1]) + "\n"
+        else:
+            while d.value() is not None:
+                s += "  " + str(self.get_position(d.value()[0])) + " > " + str(d.value()[1]) + "\n"
+                d = d.next()
+                if d is None:
+                    break
         return s
