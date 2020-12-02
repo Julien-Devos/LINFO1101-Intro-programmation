@@ -1,4 +1,4 @@
-from ordered_linked_list import OrderedLinkedList
+from orderedlinkedlist import OrderedLinkedList
 
 class Classement :
     """
@@ -37,7 +37,8 @@ class Classement :
                     Une dictionnaire ne donne pas de garanties sur l'ordre des éléments.
         """
         if self.size() >= self.__maxcapacity :
-            raise Error("Capacity of classement exceeded")
+            # DONT WORK raise Error("Capacity of classement exceeded")
+            return False
         else :
             self.__size += 1
             self.__resultats.add(r)
