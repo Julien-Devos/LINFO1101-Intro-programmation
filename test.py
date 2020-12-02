@@ -3,4 +3,4 @@ for i in range(5):
     name = input("Comment t'appelles tu ?")
     print(f"Bonjour {name}, ceci est un test!")
 
-print(f"Bon ça va calme toi {name} je connais ton prénom maintenant !")
+print(f"Bon ça va calme toi {name} je connais ton prénom maintenant !") #test
