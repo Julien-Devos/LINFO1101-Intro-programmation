@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9379e40-f1b8-4104-971e-efdc11912d36" name="Default Changelist" comment="Added exercices" />
+    <list default="true" id="e9379e40-f1b8-4104-971e-efdc11912d36" name="Default Changelist" comment="Added exercices">
+      <change afterPath="$PROJECT_DIR$/Examen Janvier 2021/[Q1] La saison des séries - Enoncé.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen Janvier 2021/[Q1] La saison des séries - Solution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen Janvier 2021/[Q2] En moyenne, êtes-vous mobile - Enoncé.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen Janvier 2021/[Q2] En moyenne, êtes-vous mobile - Solution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen Janvier 2021/[Q3] Étudiants, chargez! - Enoncé.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen Janvier 2021/[Q3] Étudiants, chargez! - Solution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen Janvier 2021/[Q4] On vous fait le tableau - Enoncé.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen Janvier 2021/[Q1] La saison des séries - [LINFO1101_LEPL1401] Introduction à la programmation - Janvier 2021 _ INGInious.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen Janvier 2021/[Q2] En moyenne, êtes-vous mobile _ - [LINFO1101_LEPL1401] Introduction à la programmation - Janvier 2021 _ INGInious.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen Janvier 2021/[Q3] Étudiants, chargez! - [LINFO1101_LEPL1401] Introduction à la programmation - Janvier 2021 _ INGInious.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examen Janvier 2021/[Q4] On vous fait le tableau - [LINFO1101_LEPL1401] Introduction à la programmation - Janvier 2021 _ INGInious.pdf" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +67,7 @@
       <workItem from="1606923419236" duration="8000" />
       <workItem from="1612276854714" duration="1438000" />
       <workItem from="1612278302037" duration="2204000" />
-      <workItem from="1612285785385" duration="379000" />
+      <workItem from="1612285785385" duration="1329000" />
     </task>
     <task id="LOCAL-00001" summary="Added exercices">
       <created>1612280286798</created>
@@ -70,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612285844675</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added exercices">
+      <created>1612286185282</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612286185282</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
