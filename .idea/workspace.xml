@@ -1,11 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9379e40-f1b8-4104-971e-efdc11912d36" name="Default Changelist" comment="" />
+    <list default="true" id="e9379e40-f1b8-4104-971e-efdc11912d36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 01/Median.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 01/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 01/Q_Bathtub with a hole.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 01/Q_Factorial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 01/Q_Polynomial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 01/Q_Somme.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/Nombres premiers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/Q_FizzBuzz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/Q_Interval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/Q_Minimum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/Q_Reste d'une division entière.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/Somme à compléter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Factorial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Maximum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Module Math.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Q_Amende pour excès de vitesse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Q_Calcul d'intérêts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Q_Equations du second degré.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Q_Fibonacci.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Q_Indice BMI.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Q_PGCD.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Q_Plus grand diviseur.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Ajoute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Carre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Hello.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Index maximum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Nombres premiers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Q_Anonymous - Information extraction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Q_Anonymous - Information treatment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Q_Average.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Q_Difference counter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Q_Equations du second degré, le retour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Q_Hogwarts - Fat Lady.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Q_Sum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Recherche.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Triangle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 05/Compteur d'événement.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 05/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 05/Q_Fusion de listes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 05/Q_Hogwarts - Sorting Hat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 05/Q_Tri de liste.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 05/Recherche binaire.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Coordonnées.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Manipulation de fichiers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Q_Hogwarts - Admission letter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Q_Hogwarts - Quidditch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Q_Représentation de tableau.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Q_Sauvegarde.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Traitement d'exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Création de dictionnaire des valeurs maximums.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Création de dictionnaire.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Egalité entre structures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Q_Anonymous - Information collection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Q_Apocalypse - Language translation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Q_Apocalypse - Morse translation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Q_Debt reminder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Q_Hogwarts - House cup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Q_Wrong iterations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Texte à Dictionnaire.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Utilisation des clés.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Amazon dispatch center must pay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Kill an ennemy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/OrderedPair.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Pair.opposite().py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Q_Création d'objets depuis un fichier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Q_SMS Store.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Student - init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/__eq__().py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/Figure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/Kill them all.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/Q_Student - init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/Q_Zoo Game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/Ticket - Variable de classe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 10/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 10/centre d'expédition d'Amazon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/LinkedList - __init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/LinkedList - insert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/LinkedList - remove.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/QBF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Q_Double Link.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Q_LinkedList - __str__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Q_LinkedList - remove_from_end.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Q_LinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Q_Lost Children.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 1/mise_en_route.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 01/Mission 1/mise_en_route.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 10/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 10/Mission 10/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 10/Robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 10/Mission 10/Robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 10/TestTurtleBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 10/Mission 10/TestTurtleBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 10/TestXYRobot.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 10/Mission 10/TestXYRobot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 10/TurtleBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 10/Mission 10/TurtleBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 10/XYRobot.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 10/Mission 10/XYRobot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/classement.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/classement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/classement_propre.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/classement_propre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/classementtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/classementtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/coureur.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/coureur.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/linked_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/orderedlinkedlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/orderedlinkedlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/orderedlinkedlisttest.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/orderedlinkedlisttest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/resultat.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/resultat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/temps.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/temps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 11/test_coureur.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 11/Mission 11/test_coureur.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 2/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/Mission 2/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 2/equation.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 02/Mission 2/equation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 3/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Mission 3/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 3/flags.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 03/Mission 3/flags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 4/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Mission 4/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 4/bioinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Mission 4/bioinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 4/bioinfoBRY.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Mission 4/bioinfoBRY.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 4/bioinfoJU.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 04/Mission 4/bioinfoJU.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 5/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 05/Mission 5/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 5/sorted_belgian_communes.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 05/Mission 5/sorted_belgian_communes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 6/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Mission 6/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 6/all_words.dat" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Mission 6/all_words.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 6/assistant.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Mission 6/assistant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 6/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 06/Mission 6/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 7/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Mission 7/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 7/episodeIV.dat" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Mission 7/episodeIV.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 7/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Mission 7/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 7/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Mission 7/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 7/text_exemple_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Mission 7/text_exemple_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 7/text_exemple_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 07/Mission 7/text_exemple_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 8/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Mission 8/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 8/mission8.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Mission 8/mission8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 8/music-db.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Mission 8/music-db.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 8/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 08/Mission 8/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 9/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/Mission 9/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 9/mission9.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/Mission 9/mission9.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission 9/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/[INFO1] Informatique 1 - Introduction à la programmation/Session 09/Mission 9/test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,6 +165,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julien\PycharmProjects\UCL-PythonMissions\[INFO1] Informatique 1 - Introduction à la programmation" />
+      <recent name="C:\Users\Julien\PycharmProjects\UCL-PythonMissions\Session 11" />
+      <recent name="C:\Users\Julien\PycharmProjects\UCL-PythonMissions\Session 10" />
+      <recent name="C:\Users\Julien\PycharmProjects\UCL-PythonMissions\Session 09" />
+      <recent name="C:\Users\Julien\PycharmProjects\UCL-PythonMissions\Session 08" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -30,10 +190,24 @@
       <option name="presentableId" value="Default" />
       <updated>1606923418098</updated>
       <workItem from="1606923419236" duration="8000" />
+      <workItem from="1612276854714" duration="1438000" />
+      <workItem from="1612278302037" duration="1862000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
